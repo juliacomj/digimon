@@ -14,7 +14,7 @@ import { FormControl } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
  
-  private response: IDigimon [];
+  public response: IDigimon [];
   private details: IDigimonDetails;
   private digimonName: string;
 
