@@ -20,11 +20,14 @@
         width: 500px;
       }
     .example-card{
-        width: 100px;
-        height:200px ;
+        
+        width: 200px;
+        height:300px ;
+        margin: 10px;
     }
 
     .cards{
+        justify-content: center;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;

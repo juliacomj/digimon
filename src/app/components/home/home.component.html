@@ -3,9 +3,10 @@
 <form class="example-form">
     <mat-form-field class="example-full-width">
       <mat-label>Procure seu digimon</mat-label>
-      <input  matInput placeholder="Ex. agumon">
+      <input (keyup)="onType($event)"  matInput placeholder="Ex. agumon">    
     </mat-form-field>
   </form>
+  <button  (click)="onSubmit($event)" mat-stroked-button color="primary">Primary</button>
 
 
  

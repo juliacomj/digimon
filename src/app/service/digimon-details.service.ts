@@ -2,25 +2,28 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IDigimon } from '../interface/digimon.interface';
 import { Observable } from 'rxjs';
+import { IDigimonDetails } from '../interface/digimon-details.interface';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class DigimonService {
+export class DigimonDetailsService {
 
   constructor(
     private http: HttpClient
   ) { }
 
-  private api_url= 'https://digimon-api.herokuapp.com/api/digimon/';
+  private api_url = 'https://digimon-cyber-sleuth-api.herokuapp.com/api/digimon'
 
-  getDigimon(digimon?:string): Observable<IDigimon[]> {
+  getDigimonDetails(digimon?:string): Observable<IDigimonDetails> {
     const digimonName = digimon ? digimon : '';
     const name = digimon ? 'name/': '';
     const url = `${this.api_url}${name}${digimonName}`;
-    return this.http.get<IDigimon[]>(url);
+    return this.http.get<IDigimonDetails>(url);
   }
+
+  
 
 
 }
